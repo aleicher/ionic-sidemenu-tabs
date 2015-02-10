@@ -19,7 +19,10 @@
     </ion-header-bar>
     <ion-content>
       <ion-list>
-        <ion-item nav-clear menu-close ui-sref="app.main">
+        <ion-item ng-repeat="option in menuOptions" ng-click="selectOption(option)">
+          <span>{{option}}</span>
+        </ion-item>
+        <ion-item nav-clear menu-close ui-sref="app.main.tab1">
           back to main
         </ion-item>
       </ion-list>
