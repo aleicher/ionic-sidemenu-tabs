@@ -5,8 +5,8 @@ angular.module('sampleApp.router', [])
 
     $stateProvider.state('app', {
       url: '/app',
-      templateUrl: 'templates/sidemenu.html',
-      controller: 'SideMenuCtrl',
+      templateUrl: 'templates/app.html',
+      controller: 'AppCtrl',
       abstract: true
     })
     .state('app.tab1', {
