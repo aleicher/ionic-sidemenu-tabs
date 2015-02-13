@@ -1,7 +1,7 @@
 angular.module('sampleApp.router', [])
 .config(['$stateProvider', '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/app/main/tab1');
+    $urlRouterProvider.otherwise('/app/tab1');
 
     $stateProvider.state('app', {
       url: '/app',
@@ -9,17 +9,7 @@ angular.module('sampleApp.router', [])
       controller: 'SideMenuCtrl',
       abstract: true
     })
-    .state('app.main', {
-      url: '/main',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/main.html',
-          controller: 'MainCtrl'
-        }
-      },
-      abstract: true
-    })
-    .state('app.main.tab1', {
+    .state('app.tab1', {
       url: '/tab1',
       views: {
         'tab1': {
@@ -28,7 +18,7 @@ angular.module('sampleApp.router', [])
         }
       }
     })
-    .state('app.main.tab2', {
+    .state('app.tab2', {
       url: '/tab2',
       views: {
         'tab2': {
