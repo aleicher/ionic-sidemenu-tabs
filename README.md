@@ -7,13 +7,37 @@ One use case for such a navigation is for example a selection of projects from t
 
 ## install
 
-Make sure to have ionic installed.
-For gulp to work, you need additional packages
+Make sure to have ionic installed, as well as gulp.
 
-### additional gulp tasks
+To install all the dependencies, run:
 
-you need the following packages installed for gulp, to minify javascript, images etc.
+    npm install
 
-```
-npm install gulp-uglify gulp-ng-annotate gulp-clean gulp-imagemin gulp-jshint gulp-html-replace gulp-angular-templatecache
-```
+also install all the bower dependencies:
+
+    bower install
+
+then, run the project with gulp:
+
+    gulp
+
+### gulp tasks
+
+the gulp system is taken from:
+
+- http://www.thomasmaximini.com/2015/02/10/speeding-up-ionic-app-development-with-gulp.html
+
+- https://github.com/tmaximini/ionic-gulp-seed
+
+
+The following gulp commands do exist:
+
+| gulp command | shortcut | what it does |
+| ------------ | -------- | ------------ |
+| gulp         |          | run local development server, start watchers, auto reload browser on change, targetfolder /tmp |
+| gulp --build | gulp -b  | create a build from current /app folder, minify assets, targetfolder /www |
+| gulp --emulate <platform> | gulp -e <platform> | run a build first, then ionic emulate <platform>. defaults to ios |
+| gulp --run <platform> | gulp -r <platform> | run a build first, then ionic run <platform>. defaults to ios |
+
+
+
